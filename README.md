@@ -20,6 +20,11 @@ Lets take a look inside `src` folder ->
 
 ### Setup the project
 - Download this template from github and open it in your fav text editor.
+
+- Go inside the folder path and execute the following command:
+```
+npm install
+```
 - In the root directory create a .env file and add the following env variables 
 ```
 PORT=<port number of your choice>
@@ -30,31 +35,17 @@ ex:
 PORT=3000
 ```
 
-- Inside the `src/config` folder create a file named as `config.json` and write the following code:
+- Inside the `src` run the following command
 ```
-{
-  "development": {
-    "username": "root",
-    "password": null,
-    "database": "database_development",
-    "host": "127.0.0.1",
-    "dialect": "mysql"
-  },
-  "test": {
-    "username": "root",
-    "password": null,
-    "database": "database_test",
-    "host": "127.0.0.1",
-    "dialect": "mysql"
-  },
-  "production": {
-    "username": "root",
-    "password": null,
-    "database": "database_production",
-    "host": "127.0.0.1",
-    "dialect": "mysql"
-  }
-}
+npx sequelize init
 ```
+- By running the above command you will get migrations and seeders along with a config.json inside the config folder.
+
+
 - If you are setting your development environment then write the username, password of your db and in dialect mention whatever db you are using eg: mysql, maria
 if you are using production or testing environment, make sure you replace the host with your db url
+
+- To run the server, execute the command -
+```
+npm run dev
+```
